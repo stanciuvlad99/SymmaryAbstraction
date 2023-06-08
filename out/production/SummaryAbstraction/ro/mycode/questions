@@ -1,0 +1,43 @@
+Q: You said that the JVM starts walking up the inheritance tree,
+starting at the class type you invoked the method on (like the Wolf
+example on the previous page). But what happens if the JVM doesn’t
+ever find a match?
+
+A: Good question! But you don’t have to worry about that. The compiler
+guarantees that a particular method is callable for a specific reference
+type, but it doesn’t say (or care) from which class that method actually
+comes from at runtime. With the Wolf example, the compiler checks for a
+sleep() method but doesn’t care that sleep() is actually defined in (and
+inherited from) class Animal. Remember that if a class inherits a
+method, it has the method.
+Where the inherited method is defined (in other words, in which
+superclass it is defined) makes no difference to the compiler. But at
+runtime, the JVM will always pick the right one. And the right one
+means the most specific version for that particular object.
+
+Q: So we see how a subclass gets to inherit a superclass method, but
+what if the superclass wants to use the subclass version of the
+method?
+
+A: A superclass won’t necessarily know about any of its subclasses. You
+might write a class and much later someone else comes along and
+extends it. But even if the superclass creator does know about (and wants
+to use) a subclass version of a method, there’s no sort of reverse or
+backward inheritance. Think about it, children inherit from parents, not
+the other way around.
+
+Q: In a subclass, what if I want to use BOTH the superclass version
+and my overriding subclass version of a method? In other words, I
+don’t want to completely replace the superclass version; I just want
+to add more stuff to it.
+
+A: You can do this! And it’s an important design feature. Think of the
+word “extends” as meaning “I want to extend the functionality of the
+superclass.”
+
+You can design your superclass methods in such a way that they contain
+method implementations that will work for any subclass, even though the
+subclasses may still need to “append” more code. In your subclass
+overriding method, you can call the superclass version using the keyword
+super. It’s like saying, “first go run the superclass version, then come
+back and finish with my own code...”

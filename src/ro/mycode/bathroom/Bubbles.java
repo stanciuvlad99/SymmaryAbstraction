@@ -1,2 +1,6 @@
-package ro.mycode.bathroom;public class Bubbles {
+package ro.mycode.bathroom;
+
+public class Bubbles{
+    int radius;
+    int colorAmt;
 }

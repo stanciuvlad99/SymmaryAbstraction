@@ -6,6 +6,12 @@ package ro.mycode.animals.canine;
 
 import ro.mycode.animals.Animal;
 
+//“Wolf IS-A Canine, so Wolf can do anything a Canine can do.
+//And Wolf IS-A Animal, so Wolf can do anything an Animal can do.”
+//It makes no difference if Wolf overrides some of the methods in Animal or Canine.
+//As far as the world (of other code) is concerned, a Wolf can do those four methods.
+//How he does them, or in which class they’re overridden, makes no difference.
+//A Wolf can makeNoise(), eat(), sleep(), and roam() because a Wolf extends from class Animal.
 public class Wolf extends Canine {
 
     //Does a lion make the same noise as a dog? Does a cat eat like a hippo?
@@ -21,7 +27,7 @@ public class Wolf extends Canine {
     }
     @Override
     public void eat(){
-        System.out.println("Mananca numai carne");
+        System.out.println("Lupul mananca numai carne");
     }
 
 

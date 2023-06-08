@@ -8,6 +8,8 @@ import ro.mycode.animals.Animal;
 
 public class Feline extends Animal {
 
+    //Remember that when one class inherits from another, we say that the subclass extends the superclass.
+    //When you want to know if one thing should extend another, apply the IS-A test.
     @Override
     public void roam(){
         System.out.println("Ragete de animale feline");

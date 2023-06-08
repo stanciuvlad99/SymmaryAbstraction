@@ -1,4 +1,10 @@
 package ro.mycode.bathroom;
 
-public class Barhtoom {
+
+//Bathroom HAS-A Tub and Tub HAS-A Bubbles
+
+public class Bathroom {
+
+    Tub bathtub;
+
 }

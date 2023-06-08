@@ -6,6 +6,7 @@ package ro.mycode.animals.canine;
 
 import ro.mycode.animals.Animal;
 
+//Dog IS-A Canine
 public class Dog extends Canine {
 
     //Does a lion make the same noise as a dog? Does a cat eat like a hippo?

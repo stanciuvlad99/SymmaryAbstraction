@@ -1,9 +1,8 @@
 package ro.mycode;
 
 import ro.mycode.animals.canine.Wolf;
-import ro.mycode.animals.feline.Cat;
 
-public class Main {
+public class Abstraction {
     public static void main(String[] args) {
 
         //The Wolf class has four methods.

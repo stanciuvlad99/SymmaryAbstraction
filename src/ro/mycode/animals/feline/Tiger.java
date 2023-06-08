@@ -6,6 +6,8 @@ package ro.mycode.animals.feline;
 
 import ro.mycode.animals.Animal;
 
+
+//Tiger IS-A Feline
 public class Tiger extends Feline {
 
     //Does a lion make the same noise as a dog? Does a cat eat like a hippo?
