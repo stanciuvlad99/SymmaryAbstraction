@@ -1,0 +1,46 @@
+A subclass extends a superclass.
+
+A subclass inherits all public instance variables and methods of the
+superclass, but does not inherit the private instance variables and
+methods of the superclass.
+
+Inherited methods can be overridden; instance variables cannot be
+overridden (although they can be redefined in the subclass, but
+that’s not the same thing, and there’s almost never a need to do it.)
+
+Use the IS-A test to verify that your inheritance hierarchy is valid. If
+X extends Y, then X IS-A Y must make sense.
+
+The IS-A relationship works in only one direction. A Hippo is an
+Animal, but not all Animals are Hippos.
+
+When a method is overridden in a subclass, and that method is
+invoked on an instance of the subclass, the overridden version of the
+method is called. (The lowest one wins.)
+
+If class B extends A, and C extends B, class B IS-A class A, and
+class C IS-A class B, and class C also IS-A class A.
+
+You avoid duplicate code.
+Put common code in one place, and let the subclasses inherit that code
+from a superclass. When you want to change that behavior, you have to
+modify it in only one place, and everybody else (i.e., all the subclasses)
+sees the change.
+
+Method overloading is nothing more than having two methods with the same
+name but different argument lists. Period. There’s no polymorphism involved
+with overloaded methods!
+
+Overloading lets you make multiple versions of a method, with different
+argument lists, for convenience to the callers. For example, if you have a
+method that takes only an int, the calling code has to convert, say, a double
+into an int before calling your method. But if you overloaded the method with
+another version that takes a double, then you’ve made things easier for the
+caller.
+
+Since an overloading method isn’t trying to fulfill the polymorphism contract
+defined by its superclass, overloaded methods have much more flexibility.
+
+An overloaded method is just a different method that happens to have the
+same met hod name. It has nothing to do with inheritance and polymorphism.
+An overloaded met hod is NOT the same as an overridden method.

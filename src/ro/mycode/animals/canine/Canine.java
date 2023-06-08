@@ -7,6 +7,8 @@ import ro.mycode.animals.Animal;
 //We’ll let Hippo continue to use its inherited roam() method— the generic one it gets from Animal.
 public class Canine extends Animal {
 
+    //Remember that when one class inherits from another, we say that the subclass extends the superclass.
+    //When you want to know if one thing should extend another, apply the IS-A test.
     public void roam(){
         System.out.println("Ragete de animale canine");
     }
